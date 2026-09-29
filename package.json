@@ -1,0 +1,24 @@
+{
+  "name": "hono-webhook-learning",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "dev:express": "node --import tsx --watch express-webhook/index.ts",
+    "dev:lan": "HOST=0.0.0.0 tsx watch src/index.ts",
+    "send": "node --import tsx scripts/send.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test src/app.test.ts express-webhook/app.test.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.1",
+    "express": "^5.2.1",
+    "hono": "^4.13.9"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
